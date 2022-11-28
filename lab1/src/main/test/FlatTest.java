@@ -14,9 +14,9 @@ public class FlatTest {
 
     @Before
     public void setUp(){
-        Device phone1 = new Phone("Apple iPhone 11 64GB", 2020,1200, false, 1000);
-        Device laptop1 = new Laptop("Asus ROG Strix G15", 2019, 1500, true, "asd");
-        Device blender = new Blender("TEFAL ULTRABLEND COOK BL962B38", 2019, 1300,true, 1000);
+        Device phone1 = new Phone("Apple iPhone XR 128GB", 2020,1200, false, 1000);
+        Device laptop1 = new Laptop("HP Pavilion 15", 2021, 1500, true, "asd");
+        Device blender = new Blender("Mulinex COOK ZX962C38", 2020, 1300,true, 1000);
 
         devices.add(phone1);
         devices.add(laptop1);
