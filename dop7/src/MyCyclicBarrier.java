@@ -63,11 +63,11 @@ public class MyCyclicBarrier {
 
     synchronized public void await() throws InterruptedException, BrokenBarrierException {
 
-        if(this.broken) {
+        while(this.broken) {
             throw new BrokenBarrierException();
         }
 
-        if(waitingParties + 1 == parties) {
+        while(waitingParties + 1 == parties) {
 
             if(this.barrierAction != null){
                 this.barrierAction.run();
