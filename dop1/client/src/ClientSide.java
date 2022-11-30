@@ -16,7 +16,7 @@ public class ClientSide {
     }
     //mockito capture (argumentCapture)
 
-    public Dog1 getCat() {
+    public Dog1 getDog() {
         return dog;
     }
 
