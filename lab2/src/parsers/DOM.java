@@ -18,10 +18,8 @@ public class DOM {
 
     public static ArrayList<Tariff> parse() throws IOException, SAXException, ParserConfigurationException {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-        DocumentBuilder documentBiulder = factory.newDocumentBuilder();
-        Document doc = documentBiulder.parse (new File ("lab2/Tariff.xml"));
-
-        String titleEl = doc.getDocumentElement().getNodeName();
+        DocumentBuilder documentBuilder = factory.newDocumentBuilder();
+        Document doc = documentBuilder.parse (new File ("lab2/Tariff.xml"));
 
         NodeList nodeList1 = doc.getElementsByTagName("tariff");
         NodeList nodeList2 = doc.getElementsByTagName("callprices");

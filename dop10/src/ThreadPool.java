@@ -20,7 +20,7 @@ public class ThreadPool implements Executor {
 
     @Override
     public void execute(Runnable command) {
-        if (isRunning) {
+        while (isRunning) {
             workQueue.offer(command);
         }
     }
