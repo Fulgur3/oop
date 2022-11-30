@@ -19,7 +19,7 @@ class CustomPhaser {
 
 
     private synchronized boolean CheckTaskFinished() {
-        if(unarrived == 0) {
+        while(unarrived == 0) {
             arrived = 0;
             unarrived = parties;
             phase++;
@@ -33,7 +33,7 @@ class CustomPhaser {
 
 
     public synchronized void arriveAndAwaitAdvance() throws InterruptedException {//классическое прибытие на барьер
-        if(terminated) return;
+        while(terminated) return;
         arrived++;
         unarrived--;
         if(!CheckTaskFinished()) {
@@ -42,7 +42,7 @@ class CustomPhaser {
     }
 
     public synchronized void arriveAndDeregister() {//отменить свое участие
-        if(terminated) return;
+        while(terminated) return;
         parties--;
         unarrived--;
         CheckTaskFinished();
