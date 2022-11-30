@@ -1,7 +1,7 @@
 package Devices;
 import java.util.*;
 
-public class Device {
+public abstract class Device {
 
     private String name;
     private int power;
@@ -15,8 +15,13 @@ public class Device {
         this.deviceTurn = deviceTurn;
     }
 
+
     public String getName() {
         return name;
+    }
+
+    public void setName(){
+        this.name=name;
     }
 
     public int getPower() {
@@ -25,6 +30,16 @@ public class Device {
 
     public int getYear() { return year; }
 
+    public void setYear(){
+        this.year=year;
+    }
+
+    public void setTurn(){
+        this.deviceTurn=deviceTurn;
+    }
+    public void setPower(){
+        this.power=power;
+    }
     public boolean getDeviceTurn() {
         return deviceTurn;
     }

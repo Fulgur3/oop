@@ -2,7 +2,7 @@ import java.lang.reflect.*;
 
 public class Main4 {
     public static void main(String[] args) {
-        ClassSelector loader = new ClassSelector("", "Cat");
+        ClassSelector loader = new ClassSelector("", "Dog");
         Class obj;
         try {
             obj = loader.load();

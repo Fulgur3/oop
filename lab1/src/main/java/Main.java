@@ -1,10 +1,7 @@
-
-
 import Devices.*;
 import java.util.*;
 
 public class Main {
-
 
 
     public static void main(String[] args) {
@@ -56,13 +53,14 @@ public class Main {
             case "1"://show
                 flat.showDevices();
                 break;
-            case "2"://add
+            case "2"://add Phone
             {
                 String name=scanner.nextLine();;
                 int power=scanner.nextInt();
                 int year=scanner.nextInt();
                 boolean turn=scanner.nextBoolean();
-                Device device= new Device(name,year,power,turn);
+                double screen=scanner.nextDouble();
+                Device device= new Phone(name,year,power,turn,screen);
                 flat.addDevice(device);
                 break;
             }

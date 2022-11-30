@@ -35,11 +35,11 @@ public class ThreadPool implements Executor {
             while (isRunning) {
                 Runnable nextTask = workQueue.poll();
                 if (nextTask != null) {
-                    // System.out.println("Run...");
+                    //System.out.println("Run...");
                     nextTask.run();
 
                 }
-                // else System.out.println("Waiting...");
+
             }
         }
     }}
